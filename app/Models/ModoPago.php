@@ -11,7 +11,7 @@ class ModoPago extends Model
 
     protected $fillable=[
         'nombre',
-        'descripcion'
+        'otros_detalles'
 
     ];
 
