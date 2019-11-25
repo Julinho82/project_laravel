@@ -13,8 +13,8 @@ class DetalleController extends BaseController
      //Listar todos los detalles
      public function index()
      {
-         $productoList = Detalle::all();
-         return $this->sendResponse($productoList, "LISTA DE DETALLE RECUPERADA");
+         $detalleList = Detalle::all();
+         return $this->sendResponse($detalleList, "LISTA DE DETALLE RECUPERADA");
      }
      //Recuperar un detalle por id
      public function show(Detalle $detalle)
