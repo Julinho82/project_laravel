@@ -45,3 +45,10 @@ Route::get('modoPagos/{modoPago}/', 'Api\ModoPagoController@show');
 Route::post('modoPagos/', 'Api\ModoPagoController@store');
 Route::put('modoPagos/{modoPago}/', 'Api\ModoPagoController@update');
 Route::delete('modoPagos/{modoPago}/', 'Api\ModoPagoController@destroy');
+
+/**Factura Routes */
+Route::get('facturas', 'Api\FacturaController@index');
+Route::get('facturas/{factura}/', 'Api\FacturaController@show');
+Route::post('facturas/', 'Api\FacturaController@store');
+Route::put('facturas/{factura}/', 'Api\FacturaController@update');
+Route::delete('facturas/{factura}/', 'Api\FacturaController@destroy');
