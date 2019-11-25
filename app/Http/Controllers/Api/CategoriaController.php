@@ -14,31 +14,31 @@ class CategoriaController extends BaseController
     public function index()
     {
         $categoriaList = Categoria::all();
-        return $this->sendResponse($categoriaList, "LISTA DE CLIENTES RECUPERADA");
+        return $this->sendResponse($categoriaList, "LISTA DE CATEGORIAS RECUPERADA");
     }
     //Recuperar una categoria por id
-    public function show(Categoria $categoriaList)
+    public function show(Categoria $categoria)
     {
-        return $this->sendResponse($categoriaList, "CLIENTE RECUPERADO");
+        return $this->sendResponse($categoria, "CATEGORIA RECUPERADA");
     }
     //Editar una categoria por id
     public function update(UpdateRequest $request, Categoria $categoria)
     {
         $categoria->update($request->all());
-        return $this->sendResponse($categoria, "CLIENTE EDITADO");
+        return $this->sendResponse($categoria, "CATEGORIAS EDITADA");
     }
     //Eliminar una categoria por id
     public function destroy(Categoria $categoria)
     {
         $categoria->delete();
-        return $this->sendResponse($categoria, "CLIENTE ELIMINADO");
+        return $this->sendResponse($categoria, "CATEGORIAS ELIMINADA");
     }
 
     //Crear una categoria
     public function store(StroreRequest $request)
     {
         $categoria = Categoria::create($request->all());
-        return $this->sendResponse($categoria, "CLIENTE CREADO");
+        return $this->sendResponse($categoria, "CATEGORIAS CREADA");
     }
 
 }
