@@ -31,3 +31,10 @@ Route::get('categorias/{categoria}/', 'Api\CategoriaController@show');
 Route::post('categorias/', 'Api\CategoriaController@store');
 Route::put('categorias/{categoria}/', 'Api\CategoriaController@update');
 Route::delete('categorias/{categoria}/', 'Api\CategoriaController@destroy');
+
+/**Producto Routes */
+Route::get('productos', 'Api\ProductoController@index');
+Route::get('productos/{producto}/', 'Api\ProductoController@show');
+Route::post('productos/', 'Api\ProductoController@store');
+Route::put('productos/{producto}/', 'Api\ProductoController@update');
+Route::delete('productos/{producto}/', 'Api\ProductoController@destroy');
