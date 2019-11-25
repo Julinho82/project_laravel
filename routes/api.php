@@ -23,3 +23,11 @@ Route::get('clientes/{cliente}/', 'Api\ClienteController@show');
 Route::post('clientes/', 'Api\ClienteController@store');
 Route::put('clientes/{cliente}/', 'Api\ClienteController@update');
 Route::delete('clientes/{cliente}/', 'Api\ClienteController@destroy');
+
+
+/**Categoria Routes */
+Route::get('categorias', 'Api\CategoriaController@index');
+Route::get('categorias/{categoria}/', 'Api\CategoriaController@show');
+Route::post('categorias/', 'Api\CategoriaController@store');
+Route::put('categorias/{categoria}/', 'Api\CategoriaController@update');
+Route::delete('categorias/{categoria}/', 'Api\CategoriaController@destroy');
