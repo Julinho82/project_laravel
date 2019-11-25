@@ -52,3 +52,10 @@ Route::get('facturas/{factura}/', 'Api\FacturaController@show');
 Route::post('facturas/', 'Api\FacturaController@store');
 Route::put('facturas/{factura}/', 'Api\FacturaController@update');
 Route::delete('facturas/{factura}/', 'Api\FacturaController@destroy');
+
+/**Detalle Routes */
+Route::get('detalles', 'Api\DetalleContoller@index');
+Route::get('detalles/{detalle}/', 'Api\DetalleContoller@show');
+Route::post('detalles/', 'Api\DetalleContoller@store');
+Route::put('detalles/{detalle}/', 'Api\DetalleContoller@update');
+Route::delete('detalles/{detalle}/', 'Api\DetalleContoller@destroy');
