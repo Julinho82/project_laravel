@@ -28,8 +28,9 @@ class UpdateRequest extends FormRequest
     public function rules()
     {
         return [
-            'fecha'=>'required'
-        ];
+            'fecha'=>'required',
+            'id_cliente'=>'required',
+            'id_modo_pago'=>'required'        ];
     }
 
     protected function failedValidation(Validator $validator)
