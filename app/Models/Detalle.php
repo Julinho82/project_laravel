@@ -11,8 +11,9 @@ class Detalle extends Model
 
     protected $fillable=[
         'cantidad',
-        'precio'
+        'id_factura',
+        'id_producto'
     ];
 
-    protected $hidden=['created_at','updated_at','id_factura','id_producto'];
+    protected $hidden=['created_at','updated_at'];
 }

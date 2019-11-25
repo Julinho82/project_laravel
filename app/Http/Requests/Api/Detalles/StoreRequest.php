@@ -28,7 +28,6 @@ class StoreRequest extends FormRequest
     {
         return [
             'cantidad'=>'required',
-            'precio'=>'required',
             'id_factura'=>'required',
             'id_producto'=>'required',
         ];

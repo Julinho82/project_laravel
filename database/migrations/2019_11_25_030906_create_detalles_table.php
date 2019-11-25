@@ -18,7 +18,7 @@ class CreateDetallesTable extends Migration
             $table->unsignedBigInteger('id_factura');
             $table->unsignedBigInteger('id_producto');
             $table->double('cantidad',8,2);
-            $table->double('precio',8,2);
+            //$table->double('precio',8,2);
             $table->timestamps();
 
             /** */
