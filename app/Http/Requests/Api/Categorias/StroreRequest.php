@@ -3,6 +3,10 @@
 namespace App\Http\Requests\Api\Categorias;
 
 use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Contracts\Validation\Validator;
+use Illuminate\Validation\ValidationException;
+use Illuminate\Http\Exceptions\HttpResponseException;
+use Illuminate\Http\JsonResponse;
 
 class StroreRequest extends FormRequest
 {
@@ -13,7 +17,7 @@ class StroreRequest extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -24,7 +28,21 @@ class StroreRequest extends FormRequest
     public function rules()
     {
         return [
-            //
+            'nombre'=>'required',
+            'descripcion'=>'required'
         ];
+    }
+
+    protected function failedValidation(Validator $validator)
+    { 
+        $errors = (new ValidationException($validator))->errors();
+        throw new HttpResponseException(response()->json(
+            [
+                'success'=>false,
+                'data'=>$errors,
+                'message'=> "Error al validar los campos"
+            ],
+            JsonResponse::HTTP_UNPROCESSABLE_ENTITY
+        ));
     }
 }
