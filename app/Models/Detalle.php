@@ -9,7 +9,7 @@ class Detalle extends Model
     //
     protected $table='detalles';
 
-    protected $filleable=[
+    protected $fillable=[
         'cantidad',
         'precio'
     ];

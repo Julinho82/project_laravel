@@ -9,7 +9,7 @@ class Producto extends Model
     //
     protected $table='productos';
 
-    protected $filleable=[
+    protected $fillable=[
         'nombre',
         'precio',
         'stock'

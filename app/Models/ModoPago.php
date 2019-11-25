@@ -9,7 +9,7 @@ class ModoPago extends Model
     //
     protected $table='modo_pagos';
 
-    protected $filleable=[
+    protected $fillable=[
         'nombre',
         'descripcion'
 

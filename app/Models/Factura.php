@@ -9,7 +9,7 @@ class Factura extends Model
     //
     protected $table='facturas';
 
-    protected $filleable=['fecha'];
+    protected $fillable=['fecha'];
 
     protected $hidden=['created_at','updated_at','id_cliente','id_modo_pago'];
 }
