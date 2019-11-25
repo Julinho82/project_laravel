@@ -38,3 +38,10 @@ Route::get('productos/{producto}/', 'Api\ProductoController@show');
 Route::post('productos/', 'Api\ProductoController@store');
 Route::put('productos/{producto}/', 'Api\ProductoController@update');
 Route::delete('productos/{producto}/', 'Api\ProductoController@destroy');
+
+/**ModoPago Routes */
+Route::get('modoPagos', 'Api\ModoPagoController@index');
+Route::get('modoPagos/{modoPago}/', 'Api\ModoPagoController@show');
+Route::post('modoPagos/', 'Api\ModoPagoController@store');
+Route::put('modoPagos/{modoPago}/', 'Api\ModoPagoController@update');
+Route::delete('modoPagos/{modoPago}/', 'Api\ModoPagoController@destroy');
