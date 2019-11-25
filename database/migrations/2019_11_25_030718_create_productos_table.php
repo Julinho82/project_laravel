@@ -18,7 +18,7 @@ class CreateProductosTable extends Migration
             $table->unsignedBigInteger('id_categoria');
             $table->string('nombre',150);
             $table->double('precio',8,2);
-            $table->double('strock',8,2);
+            $table->double('stock',8,2);
             $table->timestamps();
 
             /* */
