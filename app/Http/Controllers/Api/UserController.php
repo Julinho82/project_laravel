@@ -20,6 +20,7 @@ class UserController extends BaseController
         $request->merge([
             'password'=>bcrypt($request->input('password'))
         ]);
+        
         $user =User::create($request->all());
 
         return $this->sendResponse($user,'Usuario Creado',201);
