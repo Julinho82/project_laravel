@@ -59,3 +59,6 @@ Route::get('detalles/{detalle}/', 'Api\DetalleController@show');
 Route::post('detalles/', 'Api\DetalleController@store');
 Route::put('detalles/{detalle}/', 'Api\DetalleController@update');
 Route::delete('detalles/{detalle}/', 'Api\DetalleController@destroy');
+
+/**Login Routes */
+Route::post('auth/register','Api\UserController@register');
