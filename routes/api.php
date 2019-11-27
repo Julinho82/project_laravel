@@ -62,3 +62,5 @@ Route::delete('detalles/{detalle}/', 'Api\DetalleController@destroy');
 
 /**Login Routes */
 Route::post('auth/register','Api\UserController@register');
+Route::post('auth/login','Api\UserController@login');
+/** */

@@ -3,6 +3,10 @@
 namespace App\Http\Requests\Api\Users;
 
 use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Contracts\Validation\Validator;
+use Illuminate\Validation\ValidationException;
+use Illuminate\Http\Exceptions\HttpResponseException;
+use Illuminate\Http\JsonResponse;
 
 class LoginRequest extends FormRequest
 {
@@ -25,7 +29,23 @@ class LoginRequest extends FormRequest
     {
         return [
             //
+            'email'=>'required|email',
+            'password'=>'required'
+
             
         ];
+    }
+
+    protected function failedValidation(Validator $validator)
+    { 
+        $errors = (new ValidationException($validator))->errors();
+        throw new HttpResponseException(response()->json(
+            [
+                'success'=>false,
+                'data'=>$errors,
+                'message'=> "Error al validar los campos de Producto"
+            ],
+            JsonResponse::HTTP_UNPROCESSABLE_ENTITY
+        ));
     }
 }
