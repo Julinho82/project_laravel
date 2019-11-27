@@ -43,6 +43,7 @@ class UserController extends BaseController
     }
 
     public function me(){
-
+        $user=Auth::user();
+        return $this->sendResponse($user,"Tu usuario",200);
     }
 }
